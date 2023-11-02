@@ -11,5 +11,24 @@ function isPalindrome(str) {
 }
 
 function arrayMaxMin(arr) {
-  /* Seu código aqui */
+  let valorMax = 0;
+  let valorMin = 0;
+  let novaArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > valorMax) {
+      valorMax = arr[i];
+      valorMin = valorMax;
+    }
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < valorMin) {
+      valorMin = arr[i];
+    }
+  }
+
+  novaArr.unshift(valorMin);
+  novaArr.push(valorMax);
+
+  return novaArr;
 }
